@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: CodeKitBox website
+    url: https://codekitbox.com/
+    about: Open the live website
+  - name: Email feedback
+    url: mailto:contact@codekitbox.com
+    about: Send private feedback by email

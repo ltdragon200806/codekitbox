@@ -1,9 +1,19 @@
 # CodeKitBox
 
+[![Live Site](https://img.shields.io/badge/live-codekitbox.com-2563eb)](https://codekitbox.com/)
+[![Tools](https://img.shields.io/badge/tools-19-16a34a)](https://codekitbox.com/#tools)
+[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20中文%20%7C%20日本語-f59e0b)](https://codekitbox.com/)
+
+![CodeKitBox browser-based utilities](assets/codekitbox-social-preview.png)
+
 [CodeKitBox](https://codekitbox.com/) is a free collection of fast, practical
 browser-based utilities. Most tools process input locally on the user's device,
 without requiring an account or uploading common text inputs to an application
 server.
+
+**[Open CodeKitBox](https://codekitbox.com/)** ·
+**[Browse practical guides](https://codekitbox.com/guides/)** ·
+**[Suggest a tool](https://github.com/ltdragon200806/codekitbox/issues/new)**
 
 ## Included tools
 
@@ -57,5 +67,5 @@ The production site is deployed as static assets on Cloudflare Workers:
 ## Feedback
 
 Feedback and tool suggestions are welcome at
-[contact@codekitbox.com](mailto:contact@codekitbox.com).
-
+[contact@codekitbox.com](mailto:contact@codekitbox.com) or through
+[GitHub Issues](https://github.com/ltdragon200806/codekitbox/issues).
