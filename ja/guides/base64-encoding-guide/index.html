@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Base64 エンコード・デコード実用ガイド - CodeKitBox</title>
+    <meta name="description" content="Base64 の用途と、Unicode テキストを安全に変換する方法を解説します。" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codekitbox.com/ja/guides/base64-encoding-guide/" />
+    <meta property="og:title" content="Base64 エンコード・デコード実用ガイド - CodeKitBox" />
+    <meta property="og:description" content="Base64 の用途と、Unicode テキストを安全に変換する方法を解説します。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://codekitbox.com/ja/guides/base64-encoding-guide/" />
+    <meta property="og:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Base64 エンコード・デコード実用ガイド - CodeKitBox" />
+    <meta name="twitter:description" content="Base64 の用途と、Unicode テキストを安全に変換する方法を解説します。" />
+    <meta name="twitter:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <link rel="alternate" hreflang="en" href="https://codekitbox.com/guides/base64-encoding-guide/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://codekitbox.com/zh/guides/base64-encoding-guide/" />
+    <link rel="alternate" hreflang="ja" href="https://codekitbox.com/ja/guides/base64-encoding-guide/" />
+    <link rel="alternate" hreflang="x-default" href="https://codekitbox.com/guides/base64-encoding-guide/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tool-pages.css" />
+    <link rel="stylesheet" href="/guides.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Base64 エンコード・デコード実用ガイド","description":"Base64 の用途と、Unicode テキストを安全に変換する方法を解説します。","mainEntityOfPage":"https://codekitbox.com/ja/guides/base64-encoding-guide/","author":{"@type":"Organization","name":"CodeKitBox"},"publisher":{"@type":"Organization","name":"CodeKitBox"},"inLanguage":"ja"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Base64 は復号できますか？","acceptedAnswer":{"@type":"Answer","text":"暗号ではないため、誰でもデコードできます。"}},{"@type":"Question","name":"文字化けするのはなぜですか？","acceptedAnswer":{"@type":"Answer","text":"変換前後の文字コードが一致していない可能性があります。"}}]}]}</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="tool-page-header">
+      <nav class="tool-page-nav">
+        <a class="brand" href="/" aria-label="CodeKitBox home"><span class="brand-mark">C</span><span>CodeKitBox</span></a>
+        <div class="tool-page-nav-links"><a href="/ja/guides//">使い方ガイド</a><a href="/">すべてのツール</a></div>
+      </nav>
+    </header>
+    <main class="guide-main" id="main-content">
+      <article class="guide-article">
+        <header class="guide-hero">
+          <p class="eyebrow">実用ガイド</p>
+          <h1>Base64 エンコード・デコード実用ガイド</h1>
+          <p>Base64 はバイナリデータをテキストとして表現する方法です。API、メール、設定ファイル、Data URL で使われますが、暗号化ではありません。</p>
+          <a class="primary-button guide-cta" href="/ja/tools/base64-encoder-decoder/">無料ツールを開く</a>
+        </header>
+        <section>
+          <h2>手順</h2>
+          <ol class="guide-steps"><li>変換するテキストを Base64 ツールに貼り付けます。</li><li>エンコードを選択して Base64 値を生成します。</li><li>元に戻す場合は値を貼り付けてデコードします。</li><li>日本語などの Unicode テキストが正しく表示されるか確認します。</li></ol>
+        </section>
+        <section class="guide-tips">
+          <h2>重要なポイント</h2>
+          <ul><li>Base64 をセキュリティ対策として使用しないでください。</li><li>通常は UTF-8 で文字コードを統一します。</li><li>大きなファイルには専用のファイルツールを使用してください。</li></ul>
+        </section>
+        <section>
+          <h2>よくある質問</h2>
+          <details><summary>Base64 は復号できますか？</summary><p>暗号ではないため、誰でもデコードできます。</p></details><details><summary>文字化けするのはなぜですか？</summary><p>変換前後の文字コードが一致していない可能性があります。</p></details>
+        </section>
+        <section>
+          <h2>関連ガイド</h2>
+          <div class="related-tools"><a href="/ja/guides/jwt-decoding-guide/">JWT を安全にデコードして確認する方法</a><a href="/ja/guides/json-formatting-guide/">JSON を整形・検証・修正する方法</a><a href="/ja/guides/qr-code-guide/">読み取りやすい QR コードを作る方法</a><a href="/ja/guides/strong-password-guide/">強力なパスワードを作成・管理する方法</a></div>
+        </section>
+      </article>
+      <aside class="guide-aside">
+        <p class="eyebrow">無料ツールを開く</p>
+        <h2>Base64 エンコード・デコード実用ガイド</h2>
+        <p>Base64 の用途と、Unicode テキストを安全に変換する方法を解説します。</p>
+        <a class="primary-button" href="/ja/tools/base64-encoder-decoder/">無料ツールを開く</a>
+      </aside>
+    </main>
+    <footer class="site-footer tool-page-footer"><div><p>CodeKitBox</p><p>高速でプライバシーに配慮したブラウザツール。</p></div></footer>
+  </body>
+</html>

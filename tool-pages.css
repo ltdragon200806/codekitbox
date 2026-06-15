@@ -1,0 +1,188 @@
+.tool-page-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+
+.tool-page-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 20px 24px;
+}
+
+.tool-page-nav .brand {
+  color: var(--text);
+}
+
+.tool-page-nav-links {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.tool-page-nav-links > a {
+  color: #465267;
+  font-weight: 750;
+}
+
+.tool-page-nav-links > a:hover,
+.tool-page-nav-links > a:focus-visible {
+  color: var(--primary);
+  outline: none;
+}
+
+.tool-page-header .language-switcher {
+  background: #eef3f8;
+  border-color: #d4dde8;
+}
+
+.tool-page-header .language-button {
+  color: #596579;
+}
+
+.tool-page-header .language-button.is-active {
+  background: var(--primary);
+  color: white;
+}
+
+.tool-page-main {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 34px 24px 52px;
+}
+
+.tool-page-intro {
+  margin-bottom: 26px;
+  max-width: 780px;
+}
+
+.tool-page-intro h1 {
+  font-size: 2.25rem;
+  line-height: 1.12;
+  margin: 0 0 12px;
+}
+
+.tool-page-intro p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.tool-page-main .tool-panel {
+  min-height: 0;
+}
+
+.tool-article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 30px;
+}
+
+.tool-page-main > .ad-slot {
+  margin-top: 0;
+}
+
+.tool-article h2 {
+  font-size: 1.45rem;
+  line-height: 1.25;
+  margin: 30px 0 8px;
+}
+
+.tool-article h2:first-child {
+  margin-top: 0;
+}
+
+.tool-article p,
+.tool-article li {
+  color: var(--muted);
+}
+
+.tool-article code {
+  background: var(--surface-strong);
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+
+.deep-content {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+.deep-content > div,
+.practical-example {
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.deep-content h2,
+.practical-example h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.deep-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.deep-content li + li {
+  margin-top: 8px;
+}
+
+.practical-example {
+  border-left: 4px solid var(--accent);
+  margin-top: 18px;
+}
+
+.practical-example p {
+  margin-bottom: 0;
+}
+
+.practical-guide-link a {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.related-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.related-tools a {
+  background: var(--surface-strong);
+  border-radius: 6px;
+  color: var(--text);
+  font-weight: 700;
+  padding: 8px 11px;
+}
+
+.tool-page-footer {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+@media (max-width: 700px) {
+  .tool-page-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .tool-page-intro h1 {
+    font-size: 2rem;
+  }
+
+  .deep-content {
+    grid-template-columns: 1fr;
+  }
+}

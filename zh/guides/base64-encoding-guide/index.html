@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Base64 编码与解码实用指南 - CodeKitBox</title>
+    <meta name="description" content="了解 Base64 的用途、适用场景，以及如何安全地编码和解码 Unicode 文本。" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codekitbox.com/zh/guides/base64-encoding-guide/" />
+    <meta property="og:title" content="Base64 编码与解码实用指南 - CodeKitBox" />
+    <meta property="og:description" content="了解 Base64 的用途、适用场景，以及如何安全地编码和解码 Unicode 文本。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://codekitbox.com/zh/guides/base64-encoding-guide/" />
+    <meta property="og:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Base64 编码与解码实用指南 - CodeKitBox" />
+    <meta name="twitter:description" content="了解 Base64 的用途、适用场景，以及如何安全地编码和解码 Unicode 文本。" />
+    <meta name="twitter:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <link rel="alternate" hreflang="en" href="https://codekitbox.com/guides/base64-encoding-guide/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://codekitbox.com/zh/guides/base64-encoding-guide/" />
+    <link rel="alternate" hreflang="ja" href="https://codekitbox.com/ja/guides/base64-encoding-guide/" />
+    <link rel="alternate" hreflang="x-default" href="https://codekitbox.com/guides/base64-encoding-guide/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tool-pages.css" />
+    <link rel="stylesheet" href="/guides.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Base64 编码与解码实用指南","description":"了解 Base64 的用途、适用场景，以及如何安全地编码和解码 Unicode 文本。","mainEntityOfPage":"https://codekitbox.com/zh/guides/base64-encoding-guide/","author":{"@type":"Organization","name":"CodeKitBox"},"publisher":{"@type":"Organization","name":"CodeKitBox"},"inLanguage":"zh-CN"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Base64 可以解密吗？","acceptedAnswer":{"@type":"Answer","text":"Base64 不是加密，只需要解码即可还原。"}},{"@type":"Question","name":"为什么解码后出现乱码？","acceptedAnswer":{"@type":"Answer","text":"通常是原始字符编码与解码使用的编码不一致，建议统一使用 UTF-8。"}}]}]}</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="tool-page-header">
+      <nav class="tool-page-nav">
+        <a class="brand" href="/" aria-label="CodeKitBox home"><span class="brand-mark">C</span><span>CodeKitBox</span></a>
+        <div class="tool-page-nav-links"><a href="/zh/guides//">使用指南</a><a href="/">全部工具</a></div>
+      </nav>
+    </header>
+    <main class="guide-main" id="main-content">
+      <article class="guide-article">
+        <header class="guide-hero">
+          <p class="eyebrow">实用指南</p>
+          <h1>Base64 编码与解码实用指南</h1>
+          <p>Base64 可以把二进制数据表示为普通文本，常用于 API、邮件、配置文件和 Data URL，但它并不是加密方式。</p>
+          <a class="primary-button guide-cta" href="/zh/tools/base64-encoder-decoder/">打开免费工具</a>
+        </header>
+        <section>
+          <h2>操作步骤</h2>
+          <ol class="guide-steps"><li>把需要转换的文字粘贴到 Base64 工具中。</li><li>点击编码，生成 Base64 字符串。</li><li>需要还原时，粘贴 Base64 字符串并点击解码。</li><li>确认中文等 Unicode 内容显示正确。</li></ol>
+        </section>
+        <section class="guide-tips">
+          <h2>重要提示</h2>
+          <ul><li>不要把 Base64 当作安全或加密措施。</li><li>编码和解码时应使用一致的字符编码，通常选择 UTF-8。</li><li>体积较大的文件更适合使用专门的文件处理工具。</li></ul>
+        </section>
+        <section>
+          <h2>常见问题</h2>
+          <details><summary>Base64 可以解密吗？</summary><p>Base64 不是加密，只需要解码即可还原。</p></details><details><summary>为什么解码后出现乱码？</summary><p>通常是原始字符编码与解码使用的编码不一致，建议统一使用 UTF-8。</p></details>
+        </section>
+        <section>
+          <h2>相关指南</h2>
+          <div class="related-tools"><a href="/zh/guides/jwt-decoding-guide/">如何安全解码和检查 JWT</a><a href="/zh/guides/json-formatting-guide/">如何格式化、验证和修复 JSON</a><a href="/zh/guides/qr-code-guide/">如何制作容易扫描的二维码</a><a href="/zh/guides/strong-password-guide/">如何创建和管理高强度密码</a></div>
+        </section>
+      </article>
+      <aside class="guide-aside">
+        <p class="eyebrow">打开免费工具</p>
+        <h2>Base64 编码与解码实用指南</h2>
+        <p>了解 Base64 的用途、适用场景，以及如何安全地编码和解码 Unicode 文本。</p>
+        <a class="primary-button" href="/zh/tools/base64-encoder-decoder/">打开免费工具</a>
+      </aside>
+    </main>
+    <footer class="site-footer tool-page-footer"><div><p>CodeKitBox</p><p>快速、注重隐私的浏览器工具。</p></div></footer>
+  </body>
+</html>

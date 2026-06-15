@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JWT Decoder Online - CodeKitBox</title>
+    <meta name="description" content="Decode JWT header and payload data locally without uploading your token." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codekitbox.com/tools/jwt-decoder/" />
+    <link rel="alternate" hreflang="en" href="https://codekitbox.com/tools/jwt-decoder/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://codekitbox.com/zh/tools/jwt-decoder/" />
+    <link rel="alternate" hreflang="ja" href="https://codekitbox.com/ja/tools/jwt-decoder/" />
+    <link rel="alternate" hreflang="x-default" href="https://codekitbox.com/tools/jwt-decoder/" />
+    <meta property="og:title" content="JWT Decoder Online - CodeKitBox" />
+    <meta property="og:description" content="Decode JWT header and payload data locally without uploading your token." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://codekitbox.com/tools/jwt-decoder/" />
+    <meta property="og:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JWT Decoder Online - CodeKitBox" />
+    <meta name="twitter:description" content="Decode JWT header and payload data locally without uploading your token." />
+    <meta name="twitter:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tool-pages.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"JWT Decoder Online","description":"Decode JWT header and payload data locally without uploading your token.","url":"https://codekitbox.com/tools/jwt-decoder/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CodeKitBox","item":"https://codekitbox.com"},{"@type":"ListItem","position":2,"name":"JWT Decoder Online","item":"https://codekitbox.com/tools/jwt-decoder/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this verify the JWT signature?","acceptedAnswer":{"@type":"Answer","text":"No. Decoding a token does not verify its signature or prove that it is trustworthy."}},{"@type":"Question","name":"Should I paste production tokens?","acceptedAnswer":{"@type":"Answer","text":"Avoid sharing sensitive production tokens with any online tool, even when processing is local."}}]}]}</script>
+  </head>
+  <body data-tool="jwt" data-lang="en" data-slug="jwt-decoder">
+    <a class="skip-link" href="#main-content">Skip to tool</a>
+    <header class="tool-page-header">
+      <nav class="tool-page-nav">
+        <a class="brand" href="/" aria-label="CodeKitBox home"><span class="brand-mark">C</span><span>CodeKitBox</span></a>
+        <div class="tool-page-nav-links">
+          <a href="/">All tools</a>
+          <div class="language-switcher" aria-label="Language selector">
+            <button class="language-button is-active" data-lang="en" type="button">EN</button>
+            <button class="language-button" data-lang="zh" type="button">&#20013;</button>
+            <button class="language-button" data-lang="ja" type="button">&#26085;</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="tool-page-main" id="main-content">
+      <section class="tool-page-intro">
+        <p class="eyebrow">Free browser-based tool</p>
+        <h1>JWT Decoder Online</h1>
+        <p>Inspect a JSON Web Token header and payload directly in your browser.</p>
+      </section>
+      <section class="ad-slot" aria-label="Advertisement placeholder"><span>Advertisement</span></section>
+      <section class="tool-panel" aria-live="polite">
+        <div class="tool-heading">
+          <div><p class="eyebrow" id="tool-kicker"></p><h2 id="tool-title">JWT Decoder Online</h2></div>
+          <div class="heading-actions">
+            <button class="secondary-button" id="load-example" type="button" data-i18n="common.example">Example</button>
+            <button class="secondary-button" id="clear-tool" type="button" data-i18n="common.clear">Clear</button>
+          </div>
+        </div>
+        <div class="tool-body" id="tool-body"></div>
+      </section>
+      <article class="tool-article">
+        <h2>What is this tool?</h2>
+        <p>A JWT is a compact token format made of Base64URL-encoded sections. Developers often decode tokens to inspect claims such as issuer, subject, audience, and expiration time.</p>
+        <h2>How to use it</h2>
+        <p>Paste a three-part JWT to view its decoded JSON header and payload.</p>
+        <p class="practical-guide-link"><a href="/guides/jwt-decoding-guide/">Read the complete practical guide &rarr;</a></p>
+        
+        <section class="deep-content">
+          <div>
+            <h2>Common uses</h2>
+            <ul><li>Inspect authentication claims while debugging an API.</li><li>Check issuer, audience, roles, and subject values.</li><li>Convert <code>iat</code>, <code>nbf</code>, and <code>exp</code> claims into readable dates.</li></ul>
+          </div>
+          <div>
+            <h2>Common mistakes</h2>
+            <ul><li>A decoded JWT is not necessarily valid; its signature must still be verified.</li><li>Do not share active production tokens because they may grant access.</li><li>JWT timestamps normally use seconds, while some systems use milliseconds elsewhere.</li></ul>
+          </div>
+        </section>
+        <section class="practical-example">
+          <h2>Practical example: Checking JWT expiration</h2>
+          <p>Paste a token and compare its <code>exp</code> date with the current time. An expired token should be refreshed or rejected by the application.</p>
+        </section>
+        <h2>Privacy</h2>
+        <p>This tool is designed to process your input locally in the browser. Avoid entering passwords, private keys, or other sensitive production data into any online tool.</p>
+        <h2>Frequently asked questions</h2>
+        <details><summary>Does this verify the JWT signature?</summary><p>No. Decoding a token does not verify its signature or prove that it is trustworthy.</p></details><details><summary>Should I paste production tokens?</summary><p>Avoid sharing sensitive production tokens with any online tool, even when processing is local.</p></details>
+        <h2>More developer tools</h2>
+        <div class="related-tools"><a href="/tools/base64-encoder-decoder/">Base64 Encoder and Decoder Online</a><a href="/tools/url-encoder-decoder/">URL Encoder and Decoder Online</a><a href="/tools/jwt-decoder/">JWT Decoder Online</a><a href="/tools/unix-timestamp-converter/">Unix Timestamp Converter</a><a href="/tools/json-formatter/">JSON Formatter and Minifier</a><a href="/tools/uuid-generator/">UUID v4 Generator</a><a href="/tools/sha-hash-generator/">SHA Hash Generator</a><a href="/tools/regex-tester/">Regular Expression Tester</a><a href="/tools/text-diff-checker/">Text Diff Checker</a><a href="/tools/csv-json-converter/">CSV to JSON and JSON to CSV Converter</a><a href="/tools/text-cleaner/">Text Cleaner, Deduplicator and Sorter</a><a href="/tools/case-converter/">Case Converter</a><a href="/tools/html-entity-encoder-decoder/">HTML Entity Encoder and Decoder</a><a href="/tools/url-parser/">URL Parser Online</a><a href="/tools/qr-code-generator/">QR Code Generator Online</a><a href="/tools/password-generator/">Strong Password Generator</a><a href="/tools/percentage-calculator/">Percentage Calculator</a><a href="/tools/random-number-generator/">Random Number Generator</a><a href="/tools/word-character-counter/">Word and Character Counter</a></div>
+      </article>
+    </main>
+    <footer class="site-footer tool-page-footer">
+      <div><p>CodeKitBox</p><p>Fast online utilities for developers and technical learners.</p></div>
+      <nav class="footer-links"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a></nav>
+    </footer>
+    
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SHA ハッシュ生成 - CodeKitBox</title>
+    <meta name="description" content="ブラウザ内で SHA-256 と SHA-1 ハッシュを生成します。" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codekitbox.com/ja/tools/sha-hash-generator/" />
+    <link rel="alternate" hreflang="en" href="https://codekitbox.com/tools/sha-hash-generator/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://codekitbox.com/zh/tools/sha-hash-generator/" />
+    <link rel="alternate" hreflang="ja" href="https://codekitbox.com/ja/tools/sha-hash-generator/" />
+    <link rel="alternate" hreflang="x-default" href="https://codekitbox.com/tools/sha-hash-generator/" />
+    <meta property="og:title" content="SHA ハッシュ生成 - CodeKitBox" />
+    <meta property="og:description" content="ブラウザ内で SHA-256 と SHA-1 ハッシュを生成します。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://codekitbox.com/ja/tools/sha-hash-generator/" />
+    <meta property="og:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SHA ハッシュ生成 - CodeKitBox" />
+    <meta name="twitter:description" content="ブラウザ内で SHA-256 と SHA-1 ハッシュを生成します。" />
+    <meta name="twitter:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tool-pages.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"SHA ハッシュ生成","description":"ブラウザ内で SHA-256 と SHA-1 ハッシュを生成します。","url":"https://codekitbox.com/ja/tools/sha-hash-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CodeKitBox","item":"https://codekitbox.com"},{"@type":"ListItem","position":2,"name":"SHA ハッシュ生成","item":"https://codekitbox.com/ja/tools/sha-hash-generator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"入力内容はアップロードされますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。このツールはブラウザ内で動作します。"}},{"@type":"Question","name":"無料で利用できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。登録なしで無料で利用できます。"}}]}]}</script>
+  </head>
+  <body data-tool="hash" data-lang="ja" data-slug="sha-hash-generator">
+    <a class="skip-link" href="#main-content">Skip to tool</a>
+    <header class="tool-page-header">
+      <nav class="tool-page-nav">
+        <a class="brand" href="/" aria-label="CodeKitBox home"><span class="brand-mark">C</span><span>CodeKitBox</span></a>
+        <div class="tool-page-nav-links">
+          <a href="/">すべてのツール</a>
+          <div class="language-switcher" aria-label="Language selector">
+            <button class="language-button" data-lang="en" type="button">EN</button>
+            <button class="language-button" data-lang="zh" type="button">&#20013;</button>
+            <button class="language-button is-active" data-lang="ja" type="button">&#26085;</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="tool-page-main" id="main-content">
+      <section class="tool-page-intro">
+        <p class="eyebrow">無料のブラウザ内ツール</p>
+        <h1>SHA ハッシュ生成</h1>
+        <p>テキストから決定的な 16 進数ハッシュを計算します。</p>
+      </section>
+      <section class="ad-slot" aria-label="Advertisement placeholder"><span>広告</span></section>
+      <section class="tool-panel" aria-live="polite">
+        <div class="tool-heading">
+          <div><p class="eyebrow" id="tool-kicker"></p><h2 id="tool-title">SHA ハッシュ生成</h2></div>
+          <div class="heading-actions">
+            <button class="secondary-button" id="load-example" type="button" data-i18n="common.example">Example</button>
+            <button class="secondary-button" id="clear-tool" type="button" data-i18n="common.clear">Clear</button>
+          </div>
+        </div>
+        <div class="tool-body" id="tool-body"></div>
+      </section>
+      <article class="tool-article">
+        <h2>このツールについて</h2>
+        <p>暗号学的ハッシュはデータを固定長の指紋に変換し、整合性確認や識別に使われます。</p>
+        <h2>使い方</h2>
+        <p>同じ入力は同じハッシュになり、小さな変更でも結果が変わります。</p>
+        
+        
+        <h2>プライバシー</h2>
+        <p>このツールは入力内容をブラウザ内で処理します。パスワード、秘密鍵、その他の機密データはオンラインツールに入力しないでください。</p>
+        <h2>よくある質問</h2>
+        <details><summary>入力内容はアップロードされますか？</summary><p>いいえ。このツールはブラウザ内で動作します。</p></details><details><summary>無料で利用できますか？</summary><p>はい。登録なしで無料で利用できます。</p></details>
+        <h2>その他の開発者ツール</h2>
+        <div class="related-tools"><a href="/ja/tools/base64-encoder-decoder/">Base64 エンコード・デコード</a><a href="/ja/tools/url-encoder-decoder/">URL エンコード・デコード</a><a href="/ja/tools/jwt-decoder/">JWT デコーダー</a><a href="/ja/tools/unix-timestamp-converter/">Unix タイムスタンプ変換</a><a href="/ja/tools/json-formatter/">JSON 整形・圧縮</a><a href="/ja/tools/uuid-generator/">UUID v4 生成</a><a href="/ja/tools/sha-hash-generator/">SHA ハッシュ生成</a><a href="/ja/tools/regex-tester/">正規表現テスター</a><a href="/ja/tools/text-diff-checker/">テキスト差分チェッカー</a><a href="/ja/tools/csv-json-converter/">CSV・JSON 変換</a><a href="/ja/tools/text-cleaner/">テキスト整理・重複削除・並べ替え</a><a href="/ja/tools/case-converter/">大文字小文字・命名形式変換</a><a href="/ja/tools/html-entity-encoder-decoder/">HTML エンティティ変換</a><a href="/ja/tools/url-parser/">URL パーサー</a><a href="/ja/tools/qr-code-generator/">QR コード生成</a><a href="/ja/tools/password-generator/">強力なパスワード生成</a><a href="/ja/tools/percentage-calculator/">パーセント計算</a><a href="/ja/tools/random-number-generator/">乱数生成</a><a href="/ja/tools/word-character-counter/">文字数・単語数カウンター</a></div>
+      </article>
+    </main>
+    <footer class="site-footer tool-page-footer">
+      <div><p>CodeKitBox</p><p>開発者と技術学習者のための高速オンラインツール。</p></div>
+      <nav class="footer-links"><a href="/about.html">概要</a><a href="/privacy.html">プライバシー</a><a href="/terms.html">利用規約</a><a href="/disclaimer.html">免責事項</a><a href="/contact.html">お問い合わせ</a></nav>
+    </footer>
+    
+    <script src="/app.js" defer></script>
+  </body>
+</html>
