@@ -5,6 +5,7 @@ sentence to match each community and participate in the discussion after
 publishing. Avoid posting identical copies everywhere on the same day.
 
 - `product-hunt.md`: Product Hunt launch copy
+- `dev-community-en.md`: English long-form DEV Community article
 - `show-hn.md`: Hacker News Show HN post
 - `community-zh.md`: Chinese community launch post
 - `qiita-zenn-ja.md`: Japanese technical article draft
@@ -17,4 +18,3 @@ Recommended order:
 3. Publish the Chinese community article.
 4. Collect feedback and fix obvious issues.
 5. Prepare the Product Hunt and Show HN launch.
-
