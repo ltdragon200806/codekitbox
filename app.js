@@ -172,6 +172,27 @@ const i18n = {
     "error.csv": "Unable to convert this CSV.",
     "error.jsonArray": "Enter a JSON array of objects.",
     "error.urlParse": "Enter a valid absolute URL, including https:// or http://.",
+    "image.file": "Image file",
+    "image.outputFormat": "Output format",
+    "image.quality": "Quality",
+    "image.width": "Width",
+    "image.height": "Height",
+    "image.auto": "Auto",
+    "image.keepRatio": "Keep aspect ratio",
+    "image.privacy": "Images are processed locally in your browser. Please make sure you have the right to edit and use the images you choose.",
+    "image.compress": "Compress image",
+    "image.resize": "Resize image",
+    "image.convert": "Convert image",
+    "image.choose": "Choose a JPG, PNG, or WebP image.",
+    "image.pending": "Processed image details will appear here.",
+    "image.original": "Original",
+    "image.output": "Output",
+    "image.unableRead": "Unable to read this image.",
+    "image.chooseFirst": "Choose an image first.",
+    "image.unableProcess": "Unable to process this image.",
+    "image.smaller": "smaller",
+    "image.mayLarger": "Size may be larger",
+    "image.download": "Download",
     "privacy.title": "Private by default",
     "privacy.copy": "These tools run locally in your browser whenever possible. Your text, tokens, timestamps, and JSON snippets are processed on your device and are not uploaded by this static page.",
     "quick.title": "Built for quick checks",
@@ -358,6 +379,27 @@ const i18n = {
     "error.csv": "无法转换此 CSV。",
     "error.jsonArray": "请输入由对象组成的 JSON 数组。",
     "error.urlParse": "请输入包含 https:// 或 http:// 的有效完整 URL。",
+    "image.file": "图片文件",
+    "image.outputFormat": "输出格式",
+    "image.quality": "质量",
+    "image.width": "宽度",
+    "image.height": "高度",
+    "image.auto": "自动",
+    "image.keepRatio": "保持宽高比例",
+    "image.privacy": "图片会在你的浏览器本地处理。请确保你有权编辑和使用所选择的图片。",
+    "image.compress": "压缩图片",
+    "image.resize": "调整图片尺寸",
+    "image.convert": "转换图片格式",
+    "image.choose": "请选择 JPG、PNG 或 WebP 图片。",
+    "image.pending": "处理后的图片信息会显示在这里。",
+    "image.original": "原始图片",
+    "image.output": "输出图片",
+    "image.unableRead": "无法读取这张图片。",
+    "image.chooseFirst": "请先选择图片。",
+    "image.unableProcess": "无法处理这张图片。",
+    "image.smaller": "更小",
+    "image.mayLarger": "体积可能变大",
+    "image.download": "下载",
     "privacy.title": "默认保护隐私",
     "privacy.copy": "这些工具尽量在浏览器本地运行。你的文本、令牌、时间戳和 JSON 片段会在设备上处理，不会由这个静态页面上传。",
     "quick.title": "适合快速检查",
@@ -544,6 +586,27 @@ const i18n = {
     "error.csv": "この CSV を変換できません。",
     "error.jsonArray": "オブジェクトの JSON 配列を入力してください。",
     "error.urlParse": "https:// または http:// を含む有効な URL を入力してください。",
+    "image.file": "画像ファイル",
+    "image.outputFormat": "出力形式",
+    "image.quality": "品質",
+    "image.width": "幅",
+    "image.height": "高さ",
+    "image.auto": "自動",
+    "image.keepRatio": "縦横比を保つ",
+    "image.privacy": "画像はブラウザ内で処理されます。選択した画像を編集・使用する権利があることを確認してください。",
+    "image.compress": "画像を圧縮",
+    "image.resize": "画像をリサイズ",
+    "image.convert": "画像形式を変換",
+    "image.choose": "JPG、PNG、WebP 画像を選択してください。",
+    "image.pending": "処理後の画像情報がここに表示されます。",
+    "image.original": "元の画像",
+    "image.output": "出力画像",
+    "image.unableRead": "この画像を読み取れません。",
+    "image.chooseFirst": "先に画像を選択してください。",
+    "image.unableProcess": "この画像を処理できません。",
+    "image.smaller": "小さくなりました",
+    "image.mayLarger": "サイズが大きくなる場合があります",
+    "image.download": "ダウンロード",
     "privacy.title": "プライバシー優先",
     "privacy.copy": "これらのツールは可能な限りブラウザ内で動作します。テキスト、トークン、タイムスタンプ、JSON はこの静的ページからアップロードされません。",
     "quick.title": "素早い確認に最適",
@@ -1633,15 +1696,15 @@ function imageToolTemplate(mode) {
   const isResize = mode === "resize";
   const isConvert = mode === "convert";
   const quality = isConvert ? 92 : 75;
-  const buttonText = isResize ? "Resize image" : isConvert ? "Convert image" : "Compress image";
+  const buttonText = isResize ? tr("image.resize") : isConvert ? tr("image.convert") : tr("image.compress");
   return `
     <div class="field">
-      <label for="image-file">Image file</label>
+      <label for="image-file">${tr("image.file")}</label>
       <input id="image-file" type="file" accept="image/png,image/jpeg,image/webp" />
     </div>
     <div class="image-tool-grid">
       <div class="field">
-        <label for="image-format">Output format</label>
+        <label for="image-format">${tr("image.outputFormat")}</label>
         <select id="image-format">
           <option value="image/webp"${isConvert ? " selected" : ""}>WebP</option>
           <option value="image/jpeg"${!isConvert ? " selected" : ""}>JPEG</option>
@@ -1649,24 +1712,24 @@ function imageToolTemplate(mode) {
         </select>
       </div>
       <div class="field">
-        <label for="image-quality">Quality</label>
+        <label for="image-quality">${tr("image.quality")}</label>
         <input id="image-quality" type="range" min="40" max="100" value="${quality}" />
       </div>
       <div class="field">
-        <label for="image-width">Width</label>
-        <input id="image-width" type="number" min="1" placeholder="Auto" />
+        <label for="image-width">${tr("image.width")}</label>
+        <input id="image-width" type="number" min="1" placeholder="${tr("image.auto")}" />
       </div>
       <div class="field">
-        <label for="image-height">Height</label>
-        <input id="image-height" type="number" min="1" placeholder="Auto" />
+        <label for="image-height">${tr("image.height")}</label>
+        <input id="image-height" type="number" min="1" placeholder="${tr("image.auto")}" />
       </div>
     </div>
-    <label class="checkbox-line"><input id="image-keep-ratio" type="checkbox" ${isResize ? "checked" : ""} /> Keep aspect ratio</label>
-    <p class="privacy-note">Images are processed locally in your browser. Please make sure you have the right to edit and use the images you choose.</p>
+    <label class="checkbox-line"><input id="image-keep-ratio" type="checkbox" ${isResize ? "checked" : ""} /> ${tr("image.keepRatio")}</label>
+    <p class="privacy-note">${tr("image.privacy")}</p>
     <div class="button-row"><button class="primary-button" id="image-process" type="button">${buttonText}</button></div>
     <div class="image-preview-grid">
-      <div class="result-box" id="image-original">Choose a JPG, PNG, or WebP image.</div>
-      <div class="result-box" id="image-result">Processed image details will appear here.</div>
+      <div class="result-box" id="image-original">${tr("image.choose")}</div>
+      <div class="result-box" id="image-result">${tr("image.pending")}</div>
     </div>`;
 }
 
@@ -1681,16 +1744,16 @@ function bindImageTool(mode) {
 
   fileInput.addEventListener("change", async () => {
     const file = fileInput.files?.[0];
-    result.textContent = "Processed image details will appear here.";
+    result.textContent = tr("image.pending");
     if (!file) return;
     try {
       source = await loadImageSource(file);
       widthInput.value = source.width;
       heightInput.value = source.height;
-      original.innerHTML = `<strong>Original</strong><span>${source.width} x ${source.height}px</span><span>${formatBytes(file.size)}</span><span>${file.type || "image"}</span>`;
+      original.innerHTML = `<strong>${tr("image.original")}</strong><span>${source.width} x ${source.height}px</span><span>${formatBytes(file.size)}</span><span>${file.type || "image"}</span>`;
     } catch {
       source = null;
-      original.textContent = "Unable to read this image.";
+      original.textContent = tr("image.unableRead");
     }
   });
 
@@ -1708,7 +1771,7 @@ function bindImageTool(mode) {
 
   qs("#image-process").addEventListener("click", async () => {
     if (!source) {
-      result.textContent = "Choose an image first.";
+      result.textContent = tr("image.chooseFirst");
       return;
     }
     const width = Math.max(1, Math.round(Number(widthInput.value) || source.width));
@@ -1726,14 +1789,14 @@ function bindImageTool(mode) {
     context.drawImage(source.image, 0, 0, width, height);
     const blob = await canvasToBlob(canvas, format, quality);
     if (!blob) {
-      result.textContent = "Unable to process this image.";
+      result.textContent = tr("image.unableProcess");
       return;
     }
     const url = URL.createObjectURL(blob);
     const extension = format.split("/")[1].replace("jpeg", "jpg");
     const filename = `${source.name.replace(/\.[^.]+$/, "")}-${mode}.${extension}`;
     const saved = source.file.size - blob.size;
-    result.innerHTML = `<strong>Output</strong><span>${width} x ${height}px</span><span>${formatBytes(blob.size)}</span><span>${saved > 0 ? `${Math.round(saved / source.file.size * 100)}% smaller` : "Size may be larger"}</span><a class="primary-button image-download" href="${url}" download="${filename}">Download ${extension.toUpperCase()}</a>`;
+    result.innerHTML = `<strong>${tr("image.output")}</strong><span>${width} x ${height}px</span><span>${formatBytes(blob.size)}</span><span>${saved > 0 ? `${Math.round(saved / source.file.size * 100)}% ${tr("image.smaller")}` : tr("image.mayLarger")}</span><a class="primary-button image-download" href="${url}" download="${filename}">${tr("image.download")} ${extension.toUpperCase()}</a>`;
   });
 }
 
