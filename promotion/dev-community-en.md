@@ -22,7 +22,7 @@ So I built **CodeKitBox**:
 
 https://codekitbox.com/
 
-It is a free collection of browser-based utilities. It currently includes 19
+It is a free collection of browser-based utilities. It currently includes 22
 tools, requires no account, and processes common text inputs locally whenever
 possible.
 
@@ -36,6 +36,7 @@ generation tasks:
 - JSON formatting and minifying
 - CSV and JSON conversion
 - URL parsing
+- Image compression, resizing, and format conversion
 - UUID, SHA hash, QR code, password, and random number generation
 - Regex testing, text comparison, case conversion, and text cleanup
 - Percentage calculation and word counting
@@ -144,4 +145,3 @@ https://github.com/ltdragon200806/codekitbox
 ## Suggested DEV tags
 
 `javascript` `webdev` `opensource` `productivity`
-

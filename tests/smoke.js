@@ -51,7 +51,7 @@ const context = vm.createContext({
 
 vm.runInContext(fs.readFileSync("app.js", "utf8"), context);
 
-assert.equal(vm.runInContext("Object.keys(tools).length", context), 19);
+assert.equal(vm.runInContext("Object.keys(tools).length", context), 22);
 assert.deepEqual(
   JSON.parse(vm.runInContext("JSON.stringify(csvToObjects('name,note\\nAda,\"hello, world\"'))", context)),
   [{ name: "Ada", note: "hello, world" }],
@@ -81,5 +81,9 @@ for (const page of guidePages) {
 }
 assert.equal(fs.readFileSync("sitemap.xml", "utf8").includes("/guides/base64-encoding-guide/"), true);
 assert.equal(fs.readFileSync("tools/jwt-decoder/index.html", "utf8").includes("/guides/jwt-decoding-guide/"), true);
+assert.equal(fs.existsSync("tools/image-compressor/index.html"), true);
+assert.equal(fs.existsSync("tools/image-resizer/index.html"), true);
+assert.equal(fs.existsSync("tools/image-converter/index.html"), true);
+assert.equal(fs.readFileSync("sitemap.xml", "utf8").includes("/tools/image-compressor/"), true);
 
 console.log("CodeKitBox smoke tests passed");

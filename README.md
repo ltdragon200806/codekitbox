@@ -1,7 +1,7 @@
 # CodeKitBox
 
 [![Live Site](https://img.shields.io/badge/live-codekitbox.com-2563eb)](https://codekitbox.com/)
-[![Tools](https://img.shields.io/badge/tools-19-16a34a)](https://codekitbox.com/#tools)
+[![Tools](https://img.shields.io/badge/tools-22-16a34a)](https://codekitbox.com/#tools)
 [![Languages](https://img.shields.io/badge/languages-EN%20%7C%20中文%20%7C%20日本語-f59e0b)](https://codekitbox.com/)
 
 ![CodeKitBox browser-based utilities](assets/codekitbox-social-preview.png)
@@ -21,6 +21,7 @@ server.
 - JWT decoding and Unix timestamp conversion
 - JSON formatting, CSV conversion, and URL parsing
 - UUID, SHA hash, QR code, password, and random number generation
+- Image compression, resizing, and format conversion
 - Regex testing, text diffing, case conversion, text cleanup, and word counting
 - Percentage calculation
 

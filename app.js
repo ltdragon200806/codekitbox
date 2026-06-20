@@ -22,6 +22,7 @@ const i18n = {
     "popular.url": "Inspect URL parts",
     "popular.uuid": "Generate UUID v4",
     "popular.qr": "Create a scannable code",
+    "popular.image": "Compress and resize photos",
     "category.encoding": "Encoding & Web",
     "category.data": "Data & Time",
     "category.text": "Text & Testing",
@@ -53,12 +54,22 @@ const i18n = {
     "menu.case": "Case Converter",
     "menu.html": "HTML Entities",
     "menu.urlparser": "URL Parser",
+    "menu.imagecompressor": "Image Compressor",
+    "menu.imageresizer": "Image Resizer",
+    "menu.imageconverter": "Image Converter",
     "menu.qrcode": "QR Code Generator",
     "menu.password": "Password Generator",
     "menu.percentage": "Percentage Calculator",
     "menu.random": "Random Number",
     "menu.wordcount": "Word Counter",
     "category.everyday": "Everyday Tools",
+    "category.images": "Image Tools",
+    "tool.imagecompressor.kicker": "Images",
+    "tool.imagecompressor.title": "Image Compressor",
+    "tool.imageresizer.kicker": "Images",
+    "tool.imageresizer.title": "Image Resizer",
+    "tool.imageconverter.kicker": "Images",
+    "tool.imageconverter.title": "Image Format Converter",
     "tool.qrcode.kicker": "Everyday",
     "tool.qrcode.title": "QR Code Generator",
     "tool.password.kicker": "Everyday",
@@ -197,6 +208,7 @@ const i18n = {
     "popular.url": "查看 URL 组成",
     "popular.uuid": "生成 UUID v4",
     "popular.qr": "创建可扫描二维码",
+    "popular.image": "压缩和调整图片",
     "category.encoding": "编码与网页",
     "category.data": "数据与时间",
     "category.text": "文本与测试",
@@ -228,12 +240,22 @@ const i18n = {
     "menu.case": "大小写转换",
     "menu.html": "HTML 实体",
     "menu.urlparser": "URL 解析",
+    "menu.imagecompressor": "图片压缩",
+    "menu.imageresizer": "图片尺寸调整",
+    "menu.imageconverter": "图片格式转换",
     "menu.qrcode": "二维码生成器",
     "menu.password": "强密码生成器",
     "menu.percentage": "百分比计算器",
     "menu.random": "随机数生成器",
     "menu.wordcount": "字数统计",
     "category.everyday": "日常工具",
+    "category.images": "图片工具",
+    "tool.imagecompressor.kicker": "图片",
+    "tool.imagecompressor.title": "图片压缩",
+    "tool.imageresizer.kicker": "图片",
+    "tool.imageresizer.title": "图片尺寸调整",
+    "tool.imageconverter.kicker": "图片",
+    "tool.imageconverter.title": "图片格式转换",
     "tool.qrcode.kicker": "日常",
     "tool.qrcode.title": "二维码生成器",
     "tool.password.kicker": "日常",
@@ -372,6 +394,7 @@ const i18n = {
     "popular.url": "URL の構成を確認",
     "popular.uuid": "UUID v4 を生成",
     "popular.qr": "スキャン可能なコードを作成",
+    "popular.image": "画像を圧縮・リサイズ",
     "category.encoding": "エンコード・Web",
     "category.data": "データ・時刻",
     "category.text": "テキスト・テスト",
@@ -403,12 +426,22 @@ const i18n = {
     "menu.case": "大文字小文字",
     "menu.html": "HTML エンティティ",
     "menu.urlparser": "URL 解析",
+    "menu.imagecompressor": "画像圧縮",
+    "menu.imageresizer": "画像リサイズ",
+    "menu.imageconverter": "画像形式変換",
     "menu.qrcode": "QR コード生成",
     "menu.password": "パスワード生成",
     "menu.percentage": "パーセント計算",
     "menu.random": "乱数生成",
     "menu.wordcount": "文字数カウンター",
     "category.everyday": "日常ツール",
+    "category.images": "画像ツール",
+    "tool.imagecompressor.kicker": "画像",
+    "tool.imagecompressor.title": "画像圧縮",
+    "tool.imageresizer.kicker": "画像",
+    "tool.imageresizer.title": "画像リサイズ",
+    "tool.imageconverter.kicker": "画像",
+    "tool.imageconverter.title": "画像形式変換",
     "tool.qrcode.kicker": "日常",
     "tool.qrcode.title": "QR コード生成",
     "tool.password.kicker": "日常",
@@ -1085,6 +1118,36 @@ const tools = {
       });
     },
   },
+  imagecompressor: {
+    kicker: "tool.imagecompressor.kicker",
+    title: "tool.imagecompressor.title",
+    render() {
+      return imageToolTemplate("compress");
+    },
+    bind() {
+      bindImageTool("compress");
+    },
+  },
+  imageresizer: {
+    kicker: "tool.imageresizer.kicker",
+    title: "tool.imageresizer.title",
+    render() {
+      return imageToolTemplate("resize");
+    },
+    bind() {
+      bindImageTool("resize");
+    },
+  },
+  imageconverter: {
+    kicker: "tool.imageconverter.kicker",
+    title: "tool.imageconverter.title",
+    render() {
+      return imageToolTemplate("convert");
+    },
+    bind() {
+      bindImageTool("convert");
+    },
+  },
   qrcode: {
     kicker: "tool.qrcode.kicker",
     title: "tool.qrcode.title",
@@ -1566,13 +1629,150 @@ function jwtStatusHtml(payload) {
   return `${status}${claims ? `<div class="claim-times">${claims}</div>` : ""}`;
 }
 
+function imageToolTemplate(mode) {
+  const isResize = mode === "resize";
+  const isConvert = mode === "convert";
+  const quality = isConvert ? 92 : 75;
+  const buttonText = isResize ? "Resize image" : isConvert ? "Convert image" : "Compress image";
+  return `
+    <div class="field">
+      <label for="image-file">Image file</label>
+      <input id="image-file" type="file" accept="image/png,image/jpeg,image/webp" />
+    </div>
+    <div class="image-tool-grid">
+      <div class="field">
+        <label for="image-format">Output format</label>
+        <select id="image-format">
+          <option value="image/webp"${isConvert ? " selected" : ""}>WebP</option>
+          <option value="image/jpeg"${!isConvert ? " selected" : ""}>JPEG</option>
+          <option value="image/png">PNG</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="image-quality">Quality</label>
+        <input id="image-quality" type="range" min="40" max="100" value="${quality}" />
+      </div>
+      <div class="field">
+        <label for="image-width">Width</label>
+        <input id="image-width" type="number" min="1" placeholder="Auto" />
+      </div>
+      <div class="field">
+        <label for="image-height">Height</label>
+        <input id="image-height" type="number" min="1" placeholder="Auto" />
+      </div>
+    </div>
+    <label class="checkbox-line"><input id="image-keep-ratio" type="checkbox" ${isResize ? "checked" : ""} /> Keep aspect ratio</label>
+    <p class="privacy-note">Images are processed locally in your browser. Please make sure you have the right to edit and use the images you choose.</p>
+    <div class="button-row"><button class="primary-button" id="image-process" type="button">${buttonText}</button></div>
+    <div class="image-preview-grid">
+      <div class="result-box" id="image-original">Choose a JPG, PNG, or WebP image.</div>
+      <div class="result-box" id="image-result">Processed image details will appear here.</div>
+    </div>`;
+}
+
+function bindImageTool(mode) {
+  let source = null;
+  const fileInput = qs("#image-file");
+  const widthInput = qs("#image-width");
+  const heightInput = qs("#image-height");
+  const original = qs("#image-original");
+  const result = qs("#image-result");
+  const keepRatio = qs("#image-keep-ratio");
+
+  fileInput.addEventListener("change", async () => {
+    const file = fileInput.files?.[0];
+    result.textContent = "Processed image details will appear here.";
+    if (!file) return;
+    try {
+      source = await loadImageSource(file);
+      widthInput.value = source.width;
+      heightInput.value = source.height;
+      original.innerHTML = `<strong>Original</strong><span>${source.width} x ${source.height}px</span><span>${formatBytes(file.size)}</span><span>${file.type || "image"}</span>`;
+    } catch {
+      source = null;
+      original.textContent = "Unable to read this image.";
+    }
+  });
+
+  widthInput.addEventListener("input", () => {
+    if (!source || !keepRatio.checked || document.activeElement !== widthInput) return;
+    const width = Number(widthInput.value);
+    if (width > 0) heightInput.value = Math.round(width * source.height / source.width);
+  });
+
+  heightInput.addEventListener("input", () => {
+    if (!source || !keepRatio.checked || document.activeElement !== heightInput) return;
+    const height = Number(heightInput.value);
+    if (height > 0) widthInput.value = Math.round(height * source.width / source.height);
+  });
+
+  qs("#image-process").addEventListener("click", async () => {
+    if (!source) {
+      result.textContent = "Choose an image first.";
+      return;
+    }
+    const width = Math.max(1, Math.round(Number(widthInput.value) || source.width));
+    const height = Math.max(1, Math.round(Number(heightInput.value) || source.height));
+    const format = qs("#image-format").value;
+    const quality = Math.max(0.4, Math.min(1, Number(qs("#image-quality").value) / 100));
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext("2d");
+    if (format === "image/jpeg") {
+      context.fillStyle = "#ffffff";
+      context.fillRect(0, 0, width, height);
+    }
+    context.drawImage(source.image, 0, 0, width, height);
+    const blob = await canvasToBlob(canvas, format, quality);
+    if (!blob) {
+      result.textContent = "Unable to process this image.";
+      return;
+    }
+    const url = URL.createObjectURL(blob);
+    const extension = format.split("/")[1].replace("jpeg", "jpg");
+    const filename = `${source.name.replace(/\.[^.]+$/, "")}-${mode}.${extension}`;
+    const saved = source.file.size - blob.size;
+    result.innerHTML = `<strong>Output</strong><span>${width} x ${height}px</span><span>${formatBytes(blob.size)}</span><span>${saved > 0 ? `${Math.round(saved / source.file.size * 100)}% smaller` : "Size may be larger"}</span><a class="primary-button image-download" href="${url}" download="${filename}">Download ${extension.toUpperCase()}</a>`;
+  });
+}
+
+function loadImageSource(file) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    const url = URL.createObjectURL(file);
+    image.onload = () => {
+      URL.revokeObjectURL(url);
+      resolve({ file, image, name: file.name || "image", width: image.naturalWidth, height: image.naturalHeight });
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error("Invalid image"));
+    };
+    image.src = url;
+  });
+}
+
+function canvasToBlob(canvas, format, quality) {
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => resolve(blob), format, format === "image/png" ? undefined : quality);
+  });
+}
+
+function formatBytes(bytes) {
+  if (!Number.isFinite(bytes)) return "0 B";
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / 1024 / 1024).toFixed(2)} MB`;
+}
+
 function loadToolExample(name) {
   const examples = {
     base64: { "#base64-input": "Hello, CodeKitBox!" },
     url: { "#url-input": "hello world & language=日本語" },
     jwt: { "#jwt-input": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkNvZGVLaXRCb3giLCJpYXQiOjE3MTgzMjMyMDAsImV4cCI6MTg5MzQ1NjAwMH0.signature" },
     timestamp: { "#timestamp-input": "1893456000" },
-    json: { "#json-input": "{\"name\":\"CodeKitBox\",\"tools\":14,\"private\":true}" },
+    json: { "#json-input": "{\"name\":\"CodeKitBox\",\"tools\":22,\"private\":true}" },
     uuid: {},
     hash: { "#hash-input": "Hello, CodeKitBox!" },
     regex: { "#regex-pattern": "\\b\\w+@\\w+\\.\\w+\\b", "#regex-text": "Contact hello@example.com or support@codekitbox.com" },
@@ -1582,6 +1782,9 @@ function loadToolExample(name) {
     case: { "#case-input": "hello world value" },
     html: { "#html-input": "<p>Hello & welcome</p>" },
     urlparser: { "#urlparser-input": "https://codekitbox.com/tools/url-parser/?source=example#demo" },
+    imagecompressor: {},
+    imageresizer: {},
+    imageconverter: {},
     qrcode: { "#qr-input": "https://codekitbox.com/" },
     password: {},
     percentage: { "#percentage-rate": "15", "#percentage-value": "200" },
