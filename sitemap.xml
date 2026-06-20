@@ -78,16 +78,28 @@
   <url><loc>https://codekitbox.com/guides/json-formatting-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/guides/qr-code-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/guides/strong-password-guide/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/guides/ai-writing-word-count-checklist/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/guides/format-json-from-ai-output/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/guides/compress-images-for-ai-and-web-upload/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/guides/turn-ai-generated-links-into-qr-codes/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/zh/guides//</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/zh/guides/base64-encoding-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/zh/guides/jwt-decoding-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/zh/guides/json-formatting-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/zh/guides/qr-code-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/zh/guides/strong-password-guide/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/zh/guides/ai-writing-word-count-checklist/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/zh/guides/format-json-from-ai-output/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/zh/guides/compress-images-for-ai-and-web-upload/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/zh/guides/turn-ai-generated-links-into-qr-codes/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/ja/guides//</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/ja/guides/base64-encoding-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/ja/guides/jwt-decoding-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/ja/guides/json-formatting-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/ja/guides/qr-code-guide/</loc><priority>0.8</priority></url>
   <url><loc>https://codekitbox.com/ja/guides/strong-password-guide/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/ja/guides/ai-writing-word-count-checklist/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/ja/guides/format-json-from-ai-output/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/ja/guides/compress-images-for-ai-and-web-upload/</loc><priority>0.8</priority></url>
+  <url><loc>https://codekitbox.com/ja/guides/turn-ai-generated-links-into-qr-codes/</loc><priority>0.8</priority></url>
 </urlset>

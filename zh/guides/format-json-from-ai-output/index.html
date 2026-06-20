@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 输出的 JSON 怎么整理、格式化和验证 - CodeKitBox</title>
+    <meta name="description" content="AI 经常生成 JSON 片段。使用到应用、自动化、配置文件或提示词前，应该先格式化、验证并清理 JSON。" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codekitbox.com/zh/guides/format-json-from-ai-output/" />
+    <meta property="og:title" content="AI 输出的 JSON 怎么整理、格式化和验证 - CodeKitBox" />
+    <meta property="og:description" content="AI 经常生成 JSON 片段。使用到应用、自动化、配置文件或提示词前，应该先格式化、验证并清理 JSON。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://codekitbox.com/zh/guides/format-json-from-ai-output/" />
+    <meta property="og:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI 输出的 JSON 怎么整理、格式化和验证 - CodeKitBox" />
+    <meta name="twitter:description" content="AI 经常生成 JSON 片段。使用到应用、自动化、配置文件或提示词前，应该先格式化、验证并清理 JSON。" />
+    <meta name="twitter:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <link rel="alternate" hreflang="en" href="https://codekitbox.com/guides/format-json-from-ai-output/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://codekitbox.com/zh/guides/format-json-from-ai-output/" />
+    <link rel="alternate" hreflang="ja" href="https://codekitbox.com/ja/guides/format-json-from-ai-output/" />
+    <link rel="alternate" hreflang="x-default" href="https://codekitbox.com/guides/format-json-from-ai-output/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tool-pages.css" />
+    <link rel="stylesheet" href="/guides.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"AI 输出的 JSON 怎么整理、格式化和验证","description":"AI 经常生成 JSON 片段。使用到应用、自动化、配置文件或提示词前，应该先格式化、验证并清理 JSON。","mainEntityOfPage":"https://codekitbox.com/zh/guides/format-json-from-ai-output/","author":{"@type":"Organization","name":"CodeKitBox"},"publisher":{"@type":"Organization","name":"CodeKitBox"},"inLanguage":"zh-CN"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么 AI 生成的 JSON 会报错？","acceptedAnswer":{"@type":"Answer","text":"常见原因包括多余说明、尾随逗号、注释、单引号或未加引号的属性名。"}},{"@type":"Question","name":"格式化 JSON 会改变数据吗？","acceptedAnswer":{"@type":"Answer","text":"格式化通常只改变缩进和空白，不应该改变字段和值。"}},{"@type":"Question","name":"AI 生成的配置可以直接用吗？","acceptedAnswer":{"@type":"Answer","text":"不建议直接使用。它可能看起来合理，但仍然需要结合你的环境检查。"}}]}]}</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="tool-page-header">
+      <nav class="tool-page-nav">
+        <a class="brand" href="/" aria-label="CodeKitBox home"><span class="brand-mark">C</span><span>CodeKitBox</span></a>
+        <div class="tool-page-nav-links"><a href="/zh/guides//">使用指南</a><a href="/">全部工具</a></div>
+      </nav>
+    </header>
+    <main class="guide-main" id="main-content">
+      <article class="guide-article">
+        <header class="guide-hero">
+          <p class="eyebrow">实用指南</p>
+          <h1>AI 输出的 JSON 怎么整理、格式化和验证</h1>
+          <p>AI 生成的 JSON 很方便，但可能夹带说明文字、注释、尾随逗号或不合法引号。先格式化和验证，可以更快发现问题。</p>
+          <a class="primary-button guide-cta" href="/zh/tools/json-formatter/">打开免费工具</a>
+        </header>
+        <section>
+          <h2>操作步骤</h2>
+          <ol class="guide-steps"><li>只复制 AI 回复中的 JSON 代码块。</li><li>粘贴到 JSON 格式化工具中。</li><li>点击格式化，检查是否能正确缩进和验证。</li><li>如果验证失败，删除解释文字、注释、尾随逗号或智能引号。</li><li>确认字段值无误后，再用于应用、自动化或配置文件。</li></ol>
+        </section>
+        <section class="guide-tips">
+          <h2>重要提示</h2>
+          <ul><li>AI 可能生成看起来像 JSON、但实际不合法的内容。</li><li>不要把密钥、私钥、生产账号密码粘贴到 AI 或任何在线工具里。</li><li>部署前一定要验证 AI 生成的配置。</li></ul>
+        </section>
+        <section>
+          <h2>常见问题</h2>
+          <details><summary>为什么 AI 生成的 JSON 会报错？</summary><p>常见原因包括多余说明、尾随逗号、注释、单引号或未加引号的属性名。</p></details><details><summary>格式化 JSON 会改变数据吗？</summary><p>格式化通常只改变缩进和空白，不应该改变字段和值。</p></details><details><summary>AI 生成的配置可以直接用吗？</summary><p>不建议直接使用。它可能看起来合理，但仍然需要结合你的环境检查。</p></details>
+        </section>
+        <section>
+          <h2>相关指南</h2>
+          <div class="related-tools"><a href="/zh/guides/base64-encoding-guide/">Base64 编码与解码实用指南</a><a href="/zh/guides/jwt-decoding-guide/">如何安全解码和检查 JWT</a><a href="/zh/guides/json-formatting-guide/">如何格式化、验证和修复 JSON</a><a href="/zh/guides/qr-code-guide/">如何制作容易扫描的二维码</a></div>
+        </section>
+      </article>
+      <aside class="guide-aside">
+        <p class="eyebrow">打开免费工具</p>
+        <h2>AI 输出的 JSON 怎么整理、格式化和验证</h2>
+        <p>AI 经常生成 JSON 片段。使用到应用、自动化、配置文件或提示词前，应该先格式化、验证并清理 JSON。</p>
+        <a class="primary-button" href="/zh/tools/json-formatter/">打开免费工具</a>
+      </aside>
+    </main>
+    <footer class="site-footer tool-page-footer"><div><p>CodeKitBox</p><p>快速、注重隐私的浏览器工具。</p></div></footer>
+  </body>
+</html>

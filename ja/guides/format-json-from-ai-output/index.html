@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI が出力した JSON を使う前に整形・検証する方法 - CodeKitBox</title>
+    <meta name="description" content="AI ツールが返す JSON 風の出力を、アプリ、設定ファイル、自動化、プロンプトで使う前に整形・検証する方法です。" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codekitbox.com/ja/guides/format-json-from-ai-output/" />
+    <meta property="og:title" content="AI が出力した JSON を使う前に整形・検証する方法 - CodeKitBox" />
+    <meta property="og:description" content="AI ツールが返す JSON 風の出力を、アプリ、設定ファイル、自動化、プロンプトで使う前に整形・検証する方法です。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://codekitbox.com/ja/guides/format-json-from-ai-output/" />
+    <meta property="og:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI が出力した JSON を使う前に整形・検証する方法 - CodeKitBox" />
+    <meta name="twitter:description" content="AI ツールが返す JSON 風の出力を、アプリ、設定ファイル、自動化、プロンプトで使う前に整形・検証する方法です。" />
+    <meta name="twitter:image" content="https://codekitbox.com/assets/codekitbox-social-preview.png" />
+    <link rel="alternate" hreflang="en" href="https://codekitbox.com/guides/format-json-from-ai-output/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://codekitbox.com/zh/guides/format-json-from-ai-output/" />
+    <link rel="alternate" hreflang="ja" href="https://codekitbox.com/ja/guides/format-json-from-ai-output/" />
+    <link rel="alternate" hreflang="x-default" href="https://codekitbox.com/guides/format-json-from-ai-output/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/tool-pages.css" />
+    <link rel="stylesheet" href="/guides.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"AI が出力した JSON を使う前に整形・検証する方法","description":"AI ツールが返す JSON 風の出力を、アプリ、設定ファイル、自動化、プロンプトで使う前に整形・検証する方法です。","mainEntityOfPage":"https://codekitbox.com/ja/guides/format-json-from-ai-output/","author":{"@type":"Organization","name":"CodeKitBox"},"publisher":{"@type":"Organization","name":"CodeKitBox"},"inLanguage":"ja"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI 生成 JSON が無効になる理由は？","acceptedAnswer":{"@type":"Answer","text":"余分な説明文、末尾カンマ、コメント、シングルクォート、引用符なしのプロパティ名がよくある原因です。"}},{"@type":"Question","name":"JSON の整形でデータは変わりますか？","acceptedAnswer":{"@type":"Answer","text":"通常は空白とインデントだけが変わり、値は変わりません。"}},{"@type":"Question","name":"AI が作った設定をそのまま使えますか？","acceptedAnswer":{"@type":"Answer","text":"環境に合わない場合があるため、必ず確認してから使ってください。"}}]}]}</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="tool-page-header">
+      <nav class="tool-page-nav">
+        <a class="brand" href="/" aria-label="CodeKitBox home"><span class="brand-mark">C</span><span>CodeKitBox</span></a>
+        <div class="tool-page-nav-links"><a href="/ja/guides//">使い方ガイド</a><a href="/">すべてのツール</a></div>
+      </nav>
+    </header>
+    <main class="guide-main" id="main-content">
+      <article class="guide-article">
+        <header class="guide-hero">
+          <p class="eyebrow">実用ガイド</p>
+          <h1>AI が出力した JSON を使う前に整形・検証する方法</h1>
+          <p>AI が生成する JSON は便利ですが、説明文、コメント、末尾カンマ、不正な引用符が混ざることがあります。整形と検証で問題を見つけやすくなります。</p>
+          <a class="primary-button guide-cta" href="/ja/tools/json-formatter/">無料ツールを開く</a>
+        </header>
+        <section>
+          <h2>手順</h2>
+          <ol class="guide-steps"><li>AI の回答から JSON ブロックだけをコピーします。</li><li>JSON フォーマッターに貼り付けます。</li><li>Format を選び、インデントと検証を行います。</li><li>エラーが出る場合は、説明文、コメント、末尾カンマ、スマート引用符を削除します。</li><li>値を確認してから、アプリ、設定、自動化に使用します。</li></ol>
+        </section>
+        <section class="guide-tips">
+          <h2>重要なポイント</h2>
+          <ul><li>AI は正しい JSON に見える不正なテキストを出すことがあります。</li><li>秘密鍵、API キー、本番認証情報は AI やオンラインツールに貼り付けないでください。</li><li>AI が生成した設定はデプロイ前に必ず検証してください。</li></ul>
+        </section>
+        <section>
+          <h2>よくある質問</h2>
+          <details><summary>AI 生成 JSON が無効になる理由は？</summary><p>余分な説明文、末尾カンマ、コメント、シングルクォート、引用符なしのプロパティ名がよくある原因です。</p></details><details><summary>JSON の整形でデータは変わりますか？</summary><p>通常は空白とインデントだけが変わり、値は変わりません。</p></details><details><summary>AI が作った設定をそのまま使えますか？</summary><p>環境に合わない場合があるため、必ず確認してから使ってください。</p></details>
+        </section>
+        <section>
+          <h2>関連ガイド</h2>
+          <div class="related-tools"><a href="/ja/guides/base64-encoding-guide/">Base64 エンコード・デコード実用ガイド</a><a href="/ja/guides/jwt-decoding-guide/">JWT を安全にデコードして確認する方法</a><a href="/ja/guides/json-formatting-guide/">JSON を整形・検証・修正する方法</a><a href="/ja/guides/qr-code-guide/">読み取りやすい QR コードを作る方法</a></div>
+        </section>
+      </article>
+      <aside class="guide-aside">
+        <p class="eyebrow">無料ツールを開く</p>
+        <h2>AI が出力した JSON を使う前に整形・検証する方法</h2>
+        <p>AI ツールが返す JSON 風の出力を、アプリ、設定ファイル、自動化、プロンプトで使う前に整形・検証する方法です。</p>
+        <a class="primary-button" href="/ja/tools/json-formatter/">無料ツールを開く</a>
+      </aside>
+    </main>
+    <footer class="site-footer tool-page-footer"><div><p>CodeKitBox</p><p>高速でプライバシーに配慮したブラウザツール。</p></div></footer>
+  </body>
+</html>
